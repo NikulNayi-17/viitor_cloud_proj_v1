@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">Remove Member</mat-toolbar>
+
+
+<mat-dialog-content class="mat-typography" style="margin-top:5%; font-size: 15px;">
+    <label id="example-radio-group-label">Select the member which is to remove </label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+        [(ngModel)]="favoriteSeason">
+        <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+            {{season}}
+        </mat-radio-button>
+    </mat-radio-group>
+
+</mat-dialog-content>
+<mat-dialog-actions style="align-items: center;">
+    <button mat-raised-button mat-dialog-close color="primary">Remove</button>
+
+</mat-dialog-actions>

@@ -1,0 +1,28 @@
+.divide {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+.container {
+  padding: 1%;
+}
+
+.progress {
+  height: 15px;
+  padding: 0%;
+}
+.button {
+  text-align: left;
+}
+.progress-bar {
+  width: 50%;
+  background-color: #673ab7;
+}
+.mat-tab-body-content {
+  height: 100%;
+  overflow: none;
+}

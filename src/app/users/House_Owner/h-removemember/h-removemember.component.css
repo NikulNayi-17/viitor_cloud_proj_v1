@@ -1,0 +1,18 @@
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+mat-dialog-actions {
+  justify-content: center;
+}
+mat-toolbar {
+  height: 40px;
+  color: cornsilk;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+mat-toolbar {
+  height: 40px;
+  color: cornsilk;
+  text-align: center;
+}
+mat-form-field {
+  width: 100%;
+}
+mat-dialog-actions {
+  justify-content: center;
+}

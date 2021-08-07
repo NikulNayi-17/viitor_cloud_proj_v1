@@ -1,0 +1,33 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="authBlock">
+        <mat-card class="box">
+            <mat-card-header>
+                <mat-card-title>
+                    <h2> Select Your Role </h2>
+                </mat-card-title>
+            </mat-card-header>
+
+            <form action="">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Select Your Role</mat-label>
+                    <mat-select [(ngModel)]="selectedValue" (change)="selected()" name="role" required>
+                        <mat-option *ngFor="let role of roles" [value]="role.value">
+                            {{role.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="roleControl.hasError('required')">Please Select Your Role.</mat-error>
+                </mat-form-field>
+                <h5>
+                    <p>
+                        <span> You Selected Role as : </span>
+                        <b>{{selectedValue}}</b>
+                    </p>
+                </h5>
+
+                <button mat-raised-button color="primary" [routerLink]="['/register-user/', selectedValue]"
+                    [disabled]="!selectedValue">Submit</button>
+            </form>
+
+        </mat-card>
+    </div>
+</div>

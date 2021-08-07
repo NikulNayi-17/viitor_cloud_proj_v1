@@ -1,0 +1,10 @@
+.example-full-width {
+  width: 100%;
+}
+
+.col-sm-6 {
+  padding-top: 2%;
+}
+.row {
+  justify-content: center;
+}

@@ -1,0 +1,9 @@
+mat-toolbar {
+  height: 40px;
+  color: cornsilk;
+  text-align: center;
+}
+
+mat-dialog-actions {
+  justify-content: center;
+}

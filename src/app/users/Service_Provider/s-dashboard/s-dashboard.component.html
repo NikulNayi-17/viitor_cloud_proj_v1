@@ -1,0 +1,160 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      close
+    </mat-icon>
+  </button>
+  <!-- <div class="right">  -->
+  <div class="tlt">Service Provider</div>
+  <!-- <div></div>
+    <div class="logout">
+      <span>
+        <mat-icon matSuffix>power_settings_new</mat-icon>
+      </span>
+    </div>
+  </div> -->
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon" (click)="authService.SignOut()"
+    aria-label="Example icon-button with menu icon">
+    <mat-icon>power_settings_new</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <img class="avatar mat-elevation-z8" src="" />
+
+    <h4 class="name">Arpi Patel<button mat-icon-button color="grey"
+        aria-label="Example icon button with a open in new tab icon" (click)="OpenSDialog()">
+        <mat-icon>edit</mat-icon>
+      </button></h4>
+    <!-- <p class="designation">Software Engineer</p> -->
+
+    <mat-divider></mat-divider>
+
+
+    <div class="magneto">
+      <div class="project-mem">
+        <h3 class="josh" style="font-weight: bold;">Current Projects</h3>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <!-- <button mat-menu-item >
+            <mat-icon>add_new</mat-icon>
+            <span>Add Member</span>
+          </button> -->
+
+          <button mat-menu-item (click)="leaveproject()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Leave Project</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="btns">
+
+        <div>
+          <button class="example-button-container" mat-raised-button (click)="projectinfo()">
+
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home
+            </mat-icon>
+            Dream Project
+          </button>
+
+        </div>
+
+        <div>
+          <button class="example-button-container" mat-raised-button (click)="projectinfo()">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home
+            </mat-icon>
+            abc Project
+          </button>
+        </div>
+
+        <div>
+          <button class="example-button-container" mat-raised-button (click)="projectinfo()">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home
+            </mat-icon>
+            xyz Project
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <mat-divider></mat-divider>
+    <!-- <div class="magneto">
+    <div class="project-mem">
+      <h3 class="josh">Pending Request</h3>
+    </div>
+    <div class="btns">
+
+      <div>
+        <button class="example-button-container" mat-raised-button routerLinkActive="active" >
+          <mat-icon>account_circle</mat-icon>
+          Carpenter
+        </button>
+      </div>
+
+      <div>
+        <button class="example-button-container" mat-raised-button >
+          <mat-icon>account_circle</mat-icon>
+          Plumber
+        </button>
+      </div>
+
+      
+    </div>
+  </div> -->
+    <div style="font-weight: bold;">Pending Request</div>
+    <mat-card class="example-card" style="color:black; ">
+      AP's Home
+      <div>
+        <button mat-button>
+          <mat-icon>check_circle_outline</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon>highlight_off</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <app-tab></app-tab> -->
+    <!-- <app-s-tabs></app-s-tabs> -->
+    <div style="margin-left:1%; ">
+      <mat-tab-group mat-align-tabs="center">
+
+        <mat-tab label="Chatroom">
+          <div class="example-large-box mat-elevation-z4">
+            <app-s-chatroom></app-s-chatroom>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Timeline">
+          <div class="example-large-box mat-elevation-z4">
+            <app-s-timeline></app-s-timeline>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Progress">
+          <div class="example-large-box mat-elevation-z4">
+            <app-s-progress></app-s-progress>
+          </div>
+        </mat-tab>
+
+      </mat-tab-group>
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,19 @@
+.example-full-width{
+    width: 80%;
+}
+.card{
+   text-align: center;
+   padding: none;
+   max-width: 400px;
+   background-color: rgb(241, 237, 237);
+}
+.row{
+    justify-content: center;
+   
+}
+mat-icon{
+    padding: 1% 1% 0 0;
+}
+mat-card-header{
+    justify-content: center;
+}

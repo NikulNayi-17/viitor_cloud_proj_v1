@@ -1,0 +1,10 @@
+.box {
+    /* height: 450px; */
+  min-width: 450px;
+  max-width: 300px; /* Original width of the logo image */
+  /* width: 200%; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  float: left;
+}
